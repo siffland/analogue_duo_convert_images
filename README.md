@@ -4,6 +4,8 @@ This script uses the [NO-Intro](https://datomatic.no-intro.org) DAT file for TB1
 
 Probably still has bugs and a few games are missing, will keep working on it.  Also BoxArt has to be reduced to 165x165 pixels, I understand this on the Pocket, but not on a 1080p tv, hopefully that gets fixed in an update.
 
+I created a release zip file with the images.  Unzip it to the System\Library\Images\pce directory on your SDCard, it is only the BoxArt.
+
 ## Usage
 
 &nbsp;
