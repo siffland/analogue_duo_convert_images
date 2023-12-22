@@ -1,6 +1,6 @@
 # Image Conversion Script
 
-This script uses the [NO-Intro]() DAT file for TB16/PC-Engine and the [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails) to create bin files compatible with the Analogue Duo.  the files will need to be put in the SDCard in the System\Library\Images\pce directory.  Currently this only works for HuCards.  
+This script uses the [NO-Intro](https://datomatic.no-intro.org) DAT file for TB16/PC-Engine and the [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails) to create bin files compatible with the Analogue Duo.  the files will need to be put in the SDCard in the System\Library\Images\pce directory.  Currently this only works for HuCards.  
 
 Probably still has bugs and a few games are missing, will keep working on it.  Also BoxArt has to be reduced to 165x165 pixels, I understand this on the Pocket, but not on a 1080p tv, hopefully that gets fixed in an update.
 
@@ -12,7 +12,7 @@ Copy code
 
 `duo_image_convert.py <data_file.dat> <input_dir> <output_dir>`
 
-- `data_file.dat` \- XML file containing game metadata like names and CRC values
+- `data_file.dat` \- DAT file containing game metadata like names and CRC values, get from NO-Intro
 - `input_dir` \- Directory containing images to convert
 - `output_dir` \- Where to save converted images - this has to already exist
 
