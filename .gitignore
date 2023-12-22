@@ -1,0 +1,6 @@
+# Ignore .dat files in the datfiles directory
+datfiles/*.dat
+
+# Ignore .bin files in the pce and pcecd directories
+pce/*.bin
+pcecd/*.bin
