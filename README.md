@@ -75,4 +75,4 @@ The following games do not have thumbnails, most likely the names are wrong, was
 - No CRC found for Download (Japan).png
 - No CRC found for Hisou Kihei - Xserd (Japan).png
 - No CRC found for Bomber Man (USA).png
-No CRC found for Quiz Toukou Shashin (Japan).png
+- No CRC found for Quiz Toukou Shashin (Japan).png
