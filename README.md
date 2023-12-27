@@ -1,10 +1,10 @@
 # Image Conversion Script
 
-This script uses the [NO-Intro](https://datomatic.no-intro.org) DAT file for TB16/PC-Engine and the [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails) to create bin files compatible with the Analogue Duo.  the files will need to be put in the SDCard in the System\Library\Images\pce directory.  Currently this only works for HuCards.  
+This script uses the [NO-Intro](https://datomatic.no-intro.org) DAT file for TB16/PC-Engine HUcards or the [Redump](http://http://redump.org/downloads/) DAT file for TB16/PC-Engine CD's and the [libretro-thumbnails](https://github.com/libretro-thumbnails/libretro-thumbnails) to create bin files compatible with the Analogue Duo.  The files will need to be put in the SDCard in the System\Library\Images\pce or System\Library\Images\pcecd directory depending if it is ahucard or CD game.
 
-Probably still has bugs and a few games are missing, will keep working on it.  Also BoxArt has to be reduced to 165x165 pixels, I understand this on the Pocket, but not on a 1080p tv, hopefully that gets fixed in an update.
+Probably still has bugs and a few games are missing, will keep working on it.  Also BoxArt has to be reduced to 165x165 pixels.
 
-I created a release zip file with the images.  Unzip it to the System\Library\Images\pce directory on your SDCard, it is only the BoxArt.
+I created a release zip file with the images.  Unzip it to the System\Library\Images\pce directory on your SDCard, it is only the BoxArt.  Working on a PCECD release should be up shortly
 
 ## Usage
 
@@ -29,16 +29,27 @@ A real world example might be:
 - Python 3.10+
 - PIL / Pillow image library
 
-## Conversion Process
+## Conversion Process for HuCard and CD Games
+For each game listed in the XML data file:
 
-For each input image:
+### Match Game Title to Image File:
+  - For HuCard games, match the game title directly from the XML to the image file names in the input directory.
+  - For CD games, if there's only one .bin file associated with the game, use its CRC. If there are multiple .bin files, select the CRC of the file named "(Track 02)" or "(Track 2)".
 
-1.  Lookup CRC by matching filename to game title in XML
-2.  Skip image if no CRC found
-3.  Resize image to 165 pixels tall, maintaining aspect ratio
-4.  Convert to RGBA mode
-5.  Write pixel data to custom binary format
-6.  Save converted image as "{crc}.bin"
+### Skip Image if No Match Found:
+  - If no matching image file is found for a game title, or if no appropriate CRC value is found, skip the image.
+
+### Image Resizing:
+  - Resize the matched image to a height of 165 pixels while maintaining the aspect ratio.
+
+### Convert Image to RGBA Mode:
+  - Convert the image to RGBA mode to ensure it has a consistent format for processing.
+
+### Write Pixel Data to Custom Binary Format:
+  - Process the pixel data of the image and write it to a custom binary format as per the requirements of the target system or application.
+
+### Save the Converted Image:
+  - Save the converted image file with the name format "{crc}.bin", where {crc} is the CRC value extracted from the XML data file.
 
 ## Threading
 
