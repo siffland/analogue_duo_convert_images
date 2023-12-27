@@ -46,35 +46,4 @@ The image conversion process is threaded using the `concurrent.futures` module t
 
 ## Error Handling
 
-Any exceptions during processing will be printed but otherwise ignored, allowing the script to continue converting other images.
-
-## MIA Games
-
-The following games do not have thumbnails, most likely the names are wrong, was going to write exception code, but in reality they need to be fixed upstream.
-
-- No CRC found for Lady Sword (Japan) (Alt 1).png
-- No CRC found for Mr. Heli no Daibouken (Japan).png
-- No CRC found for Nekketsu Koukou Dodgeball-bu - Soccer PC Hen (Japan).png
-- No CRC found for Bonk's Revenge (USA, Europe) (Virtual Console).png
-- No CRC found for Atlantean (World) (Aftermarket) (Homebrew).png
-- No CRC found for Druaga no Tou (Japan).png
-- No CRC found for J.J. _ Jeff (USA).png
-- No CRC found for Bomberman '93 (USA, Europe) (Virtual Console).png
-- No CRC found for Lady Sword - Ryakudatsu Sareta 10-nin no Otome (Japan) (Alt 1) (Unl).png
-- No CRC found for Bomber Man '93 (USA, Europe) (Virtual Console).png
-- No CRC found for Hisou Kihei X-Serd (Japan).png
-- No CRC found for Image Fight (Japan).png
-- No CRC found for Splatterhouse (Japan).png
-- No CRC found for Bomber Man '94 (Japan).png
-- No CRC found for F1 Circus '91 - World Championship (Japan).png
-- No CRC found for Dungeons _ Dragons - Order of the Griffon (USA).png
-- No CRC found for Santatlantean (World) (Aftermarket) (Homebrew).png
-- No CRC found for Formation Soccer - On J. League (Japan).png
-- No CRC found for Mr. Heli no Daibouken (Japan) (Alt 1).png
-- No CRC found for Bomber Man '93 (USA).png
-- No CRC found for Cyber Core (USA).png
-- No CRC found for Download (Japan) (Alt 1).png
-- No CRC found for Download (Japan).png
-- No CRC found for Hisou Kihei - Xserd (Japan).png
-- No CRC found for Bomber Man (USA).png
-- No CRC found for Quiz Toukou Shashin (Japan).png
+Any exceptions during processing will be printed but otherwise ignored, allowing the script to continue converting other images
